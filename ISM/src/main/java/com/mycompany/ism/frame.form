@@ -95,27 +95,25 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jFormattedTextField5" alignment="1" min="-2" pref="660" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jScrollPane3" pref="235" max="32767" attributes="0"/>
-                                      <Component id="jFormattedTextField1" min="-2" pref="157" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane7" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jFormattedTextField2" max="32767" attributes="0"/>
-                                          <Component id="jScrollPane8" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="jFormattedTextField3" min="-2" pref="198" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane9" alignment="0" min="-2" pref="331" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jScrollPane3" pref="287" max="32767" attributes="0"/>
+                              <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jScrollPane7" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jFormattedTextField1" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="117" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane9" alignment="0" min="-2" pref="396" max="-2" attributes="0"/>
+                              <Component id="jScrollPane8" alignment="0" min="-2" pref="353" max="-2" attributes="0"/>
+                              <Component id="jFormattedTextField2" alignment="0" min="-2" pref="335" max="-2" attributes="0"/>
+                              <Component id="jFormattedTextField3" alignment="0" min="-2" pref="369" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jFormattedTextField5" min="-2" pref="647" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -251,6 +249,7 @@
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="1. Be careful of public WIFI&#xa;2. Run software updates ASAP&#xa;3. Be careful of strange emails&#xa;4. Be selective of who you give your email to&#xa;5. Use unique passwords for each account&#xa;6. Remember those passwords with a password manager"/>
+                        <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
