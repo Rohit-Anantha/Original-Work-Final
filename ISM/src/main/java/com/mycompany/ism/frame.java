@@ -25,6 +25,7 @@ import java.nio.Buffer;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -59,6 +60,8 @@ public class frame extends javax.swing.JFrame {
         passwordTab = new javax.swing.JTabbedPane();
         self_Protect = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         Email_Test = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         emailBox = new javax.swing.JFormattedTextField();
@@ -68,8 +71,6 @@ public class frame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         breachName = new javax.swing.JFormattedTextField();
         AboutBreach = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        aboutBreachBox = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
         jep = new javax.swing.JEditorPane();
         jPanel1 = new javax.swing.JPanel();
@@ -90,15 +91,26 @@ public class frame extends javax.swing.JFrame {
 
         passwordTab.setFocusable(false);
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Protect your passwords from cyber \ncriminals, since that’s what they care \nabout most.");
+        jScrollPane3.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(549, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(434, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout self_ProtectLayout = new javax.swing.GroupLayout(self_Protect);
@@ -152,11 +164,6 @@ public class frame extends javax.swing.JFrame {
             }
         });
 
-        aboutBreachBox.setColumns(20);
-        aboutBreachBox.setRows(5);
-        aboutBreachBox.setText("About a breach:");
-        jScrollPane3.setViewportView(aboutBreachBox);
-
         jep.setEditable(false);
         jep.setContentType("text/html"); // NOI18N
         jep.setText("<HTML>  <p>In May 2019 the graphic design tool website <a href=https://support.canva.com/contact/customer-support/may-24-security-incident-faqs/ target=\\_blank\\ rel=\\noopener\\>Canva suffered a data breach</a> that impacted 137 million subscribers. The exposed data included email addresses usernames names cities of residence and passwords stored as bcrypt hashes for users not using social logins. The data was provided to HIBP by a source who requested it be attributed to \\JimScott.Sec@protonmail.com\\.</p>  </HTML>  ");
@@ -197,14 +204,11 @@ public class frame extends javax.swing.JFrame {
                                 .addComponent(emailBox, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(findBreaches, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane2)
-                            .addGroup(Email_TestLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jScrollPane2)))
                     .addGroup(Email_TestLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(286, Short.MAX_VALUE))
+                        .addGap(19, 19, 19)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         Email_TestLayout.setVerticalGroup(
             Email_TestLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,11 +225,9 @@ public class frame extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(breachName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AboutBreach))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6)
-                .addGap(49, 49, 49))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                .addGap(139, 139, 139))
         );
 
         passwordTab.addTab("Test your Email!", Email_Test);
@@ -485,7 +487,7 @@ public class frame extends javax.swing.JFrame {
             s = s.replace("(", "");
             s = s.replace(")", "");
 
-            aboutBreachBox.setText(s);
+            //aboutBreachBox.setText(s);
 
         } catch (IOException ex) {
             Logger.getLogger(frame.class.getName()).log(Level.SEVERE, null, ex);
@@ -615,7 +617,7 @@ public class frame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static String[] files;
+    public static ArrayList<String> files;
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -624,10 +626,10 @@ public class frame extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
 
-        files = new String[3];
-        files[0] = "FirefoxMonitor";
-        files[1] = "WordLists";
-        files[2] = "ShieldsUP";
+        files = new ArrayList<>();
+        files.add("FirefoxMonitor");
+        files.add("ShieldsUp");
+        files.add("HIBP");
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -647,6 +649,7 @@ public class frame extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -662,7 +665,6 @@ public class frame extends javax.swing.JFrame {
     private javax.swing.JMenu Menu_File;
     private javax.swing.JPasswordField PasswordField;
     private javax.swing.JPanel Sources;
-    private javax.swing.JTextArea aboutBreachBox;
     private javax.swing.JFormattedTextField breachName;
     private javax.swing.JTextArea breachesBox;
     private javax.swing.JFormattedTextField emailBox;
@@ -678,6 +680,7 @@ public class frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTree jTree1;
     private javax.swing.JEditorPane jep;
     private javax.swing.JTextArea passwordBox;
